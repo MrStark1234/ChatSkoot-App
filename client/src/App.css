@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  font-family: "Rubik", sans-serif;
+  background-image: url("./image/bs.jpg");
+  background-size: cover;
+  background-position: center;
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.281);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.chatarea {
+  background-image: url("./image/c.png");
+  background-size: cover;
+  opacity: 0.94;
+}
+
+/* .sscolor {
+  color: #3f4041ea;
+} */
