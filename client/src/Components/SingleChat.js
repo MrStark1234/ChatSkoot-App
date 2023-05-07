@@ -17,7 +17,7 @@ import axios from "axios";
 import ScrollableChat from "./ScrollableChat";
 import io from "socket.io-client";
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://chatskoot-server-qifo.onrender.com";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -46,7 +46,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `/api/message/${selectedChat._id}`,
+        `https://chatskoot-server-qifo.onrender.com/api/message/${selectedChat._id}`,
         config
       );
 
@@ -115,7 +115,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage("");
         const { data } = await axios.post(
-          "/api/message",
+          "https://chatskoot-server-qifo.onrender.com/api/message",
           {
             content: newMessage,
             chatId: selectedChat._id,

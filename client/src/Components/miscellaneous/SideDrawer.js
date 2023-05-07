@@ -76,7 +76,10 @@ const SideDrawer = () => {
         },
       };
 
-      const { data } = await axios.get(`/api/user?search=${search}`, config);
+      const { data } = await axios.get(
+        `https://chatskoot-server-qifo.onrender.com/api/user?search=${search}`,
+        config
+      );
 
       setLoading(false);
       setSearchResult(data);
@@ -102,7 +105,11 @@ const SideDrawer = () => {
         },
       };
 
-      const { data } = await axios.post("/api/chat", { userId }, config);
+      const { data } = await axios.post(
+        "https://chatskoot-server-qifo.onrender.com/api/chat",
+        { userId },
+        config
+      );
 
       if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
 

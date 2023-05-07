@@ -60,7 +60,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
       };
 
       const { data } = await axios.put(
-        `/api/chat/groupRemove`,
+        `https://chatskoot-server-qifo.onrender.com/api/chat/groupRemove`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -100,7 +100,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
       };
 
       const { data } = await axios.put(
-        `/api/chat/rename`,
+        `https://chatskoot-server-qifo.onrender.com/api/chat/rename`,
         {
           chatId: selectedChat._id,
           chatName: groupChatName,
@@ -140,7 +140,10 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`/api/user?search=${search}`, config);
+      const { data } = await axios.get(
+        `https://chatskoot-server-qifo.onrender.com/api/user?search=${search}`,
+        config
+      );
 
       setLoading(false);
       setSearchResult(data);
@@ -193,7 +196,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
       };
 
       const { data } = await axios.put(
-        `/api/chat/groupAdd`,
+        `https://chatskoot-server-qifo.onrender.com/api/chat/groupAdd`,
         {
           chatId: selectedChat._id,
           userId: user1._id,

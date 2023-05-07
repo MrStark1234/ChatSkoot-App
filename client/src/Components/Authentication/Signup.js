@@ -100,7 +100,7 @@ const Signup = () => {
       };
 
       const { data } = await axios.post(
-        "/api/user",
+        "https://chatskoot-server-qifo.onrender.com/api/user",
         { name, email, password, pic },
         config
       );
