@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "dev": "node index.js",
+    "build": "npm run build"
   },
   "author": "Suraj Singhal",
   "license": "ISC",
