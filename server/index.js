@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const chats = require("./data/data");
@@ -9,7 +10,10 @@ const messageRoutes = require("./Routes/messageRoutes");
 dotenv.config();
 const app = express();
 
+app.use(cors());
 app.use(express.json()); //TO ACCEPT JSON DATA------------
+
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("API is running");
