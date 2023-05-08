@@ -1,3 +1,5 @@
+Deployed Project Link :---- https://chatskoot.netlify.app
+
 This Project starts with Create-React-App for Client Environment & NPM init for Server Environment.
 
 This Website is all about real-time chat website was developed using the MERN (MongoDB, Express, React, Node.js) stack, Chakra UI, and Socket.io.
@@ -40,3 +42,8 @@ PACKAGES USED IN FRONTEND/CLIENT PART--------------------------
 5. React-Notification-Badge--- I used this package to show the notification in real time.
 6. Cloudinary--- I used this website to store my user images on the cloud.
 7. Socket.IO--- The most important package in my Website, It provided me the solution of REAL TIME CHAT SYSTEM ARCHITECTURE and also provided a biodirectional communication channel between Client and Server.
+
+Note :-- If anyone try to download my project's node_module folder in client side, then I suggest you to please run this command :-
+npm i --legacy-peer-deps
+
+Because there is one package called "react-notification-badge" only this package take --legacy-peer-deps command to install properly.
