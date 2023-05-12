@@ -131,75 +131,81 @@ const Signup = () => {
     }
   };
   return (
-    <VStack spacing="20px" color="black">
-      <FormControl id="first-name" isRequired>
-        <FormLabel color="white">Name</FormLabel>
-        <Input
-          color="white"
-          placeholder="Enter Your Name"
-          onChange={(e) => setName(e.target.value)}
-        />
-      </FormControl>
-      <FormControl id="email" isRequired>
-        <FormLabel color="white">Email</FormLabel>
-        <Input
-          color="white"
-          placeholder="Enter Your Email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </FormControl>
-      <FormControl id="password" isRequired>
-        <FormLabel color="white">Password</FormLabel>
-        <InputGroup>
+    <>
+      <img
+        src="https://cdni.iconscout.com/illustration/premium/thumb/business-account-security-4996023-4194744.png?f=webp"
+        alt="Sample"
+      />
+      <VStack spacing="20px" color="black">
+        <FormControl id="first-name" isRequired>
+          <FormLabel color="white">Name</FormLabel>
           <Input
             color="white"
-            type={show ? "text" : "password"}
-            placeholder="Enter a new Password"
-            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter Your Name"
+            onChange={(e) => setName(e.target.value)}
           />
-          <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
-              {show ? "Hide" : "Show"}
-            </Button>
-          </InputRightElement>
-        </InputGroup>
-      </FormControl>
-      <FormControl id="cpassword" isRequired>
-        <FormLabel color="white">Confirm Password</FormLabel>
-        <InputGroup>
+        </FormControl>
+        <FormControl id="email" isRequired>
+          <FormLabel color="white">Email</FormLabel>
           <Input
             color="white"
-            type={show ? "text" : "password"}
-            placeholder="Re-Enter your Password"
-            onChange={(e) => setCpassword(e.target.value)}
+            placeholder="Enter Your Email"
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
-              {show ? "Hide" : "Show"}
-            </Button>
-          </InputRightElement>
-        </InputGroup>
-      </FormControl>
-      <FormControl id="pic" isRequired>
-        <FormLabel color="white">Upload your Profile Picture</FormLabel>
-        <Input
-          color="white"
-          type="file"
-          padding={1.5}
-          accept="image/*"
-          onChange={(e) => postDetails(e.target.files[0])}
-        />
-      </FormControl>
-      <Button
-        colorScheme="cyan"
-        width="100%"
-        style={{ marginTop: 15 }}
-        onClick={submitHandler}
-        isLoading={loading}
-      >
-        Register
-      </Button>
-    </VStack>
+        </FormControl>
+        <FormControl id="password" isRequired>
+          <FormLabel color="white">Password</FormLabel>
+          <InputGroup>
+            <Input
+              color="white"
+              type={show ? "text" : "password"}
+              placeholder="Enter a new Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <InputRightElement width="4.5rem">
+              <Button h="1.75rem" size="sm" onClick={handleClick}>
+                {show ? "Hide" : "Show"}
+              </Button>
+            </InputRightElement>
+          </InputGroup>
+        </FormControl>
+        <FormControl id="cpassword" isRequired>
+          <FormLabel color="white">Confirm Password</FormLabel>
+          <InputGroup>
+            <Input
+              color="white"
+              type={show ? "text" : "password"}
+              placeholder="Re-Enter your Password"
+              onChange={(e) => setCpassword(e.target.value)}
+            />
+            <InputRightElement width="4.5rem">
+              <Button h="1.75rem" size="sm" onClick={handleClick}>
+                {show ? "Hide" : "Show"}
+              </Button>
+            </InputRightElement>
+          </InputGroup>
+        </FormControl>
+        <FormControl id="pic" isRequired>
+          <FormLabel color="white">Upload your Profile Picture</FormLabel>
+          <Input
+            color="white"
+            type="file"
+            padding={1.5}
+            accept="image/*"
+            onChange={(e) => postDetails(e.target.files[0])}
+          />
+        </FormControl>
+        <Button
+          colorScheme="cyan"
+          width="100%"
+          style={{ marginTop: 15 }}
+          onClick={submitHandler}
+          isLoading={loading}
+        >
+          Register
+        </Button>
+      </VStack>
+    </>
   );
 };
 

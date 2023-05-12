@@ -71,55 +71,61 @@ const Login = () => {
     }
   };
   return (
-    <VStack spacing="50px" color="black">
-      <FormControl id="lemail" isRequired>
-        <FormLabel color="white">Email</FormLabel>
-        <Input
-          color="white"
-          placeholder="Enter Your Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </FormControl>
-      <FormControl id="lpassword" isRequired>
-        <FormLabel color="white">Password</FormLabel>
-        <InputGroup>
+    <>
+      <img
+        src="https://cdni.iconscout.com/illustration/premium/thumb/login-authentication-otp-4575440-3793618.png"
+        alt="Sample"
+      />
+      <VStack spacing="50px" color="black">
+        <FormControl id="lemail" isRequired>
+          <FormLabel color="white">Email</FormLabel>
           <Input
             color="white"
-            type={show ? "text" : "password"}
-            placeholder="Enter Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter Your Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
-              {show ? "Hide" : "Show"}
-            </Button>
-          </InputRightElement>
-        </InputGroup>
-      </FormControl>
+        </FormControl>
+        <FormControl id="lpassword" isRequired>
+          <FormLabel color="white">Password</FormLabel>
+          <InputGroup>
+            <Input
+              color="white"
+              type={show ? "text" : "password"}
+              placeholder="Enter Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <InputRightElement width="4.5rem">
+              <Button h="1.75rem" size="sm" onClick={handleClick}>
+                {show ? "Hide" : "Show"}
+              </Button>
+            </InputRightElement>
+          </InputGroup>
+        </FormControl>
 
-      <Button
-        colorScheme="cyan"
-        width="100%"
-        style={{ marginTop: 15 }}
-        onClick={submitHandler}
-        isLoading={loading}
-      >
-        Login
-      </Button>
-      <Button
-        variant="solid"
-        colorScheme="red"
-        width="100%"
-        onClick={() => {
-          setEmail("develop@gmail.com");
-          setPassword("develop");
-        }}
-      >
-        Get Guest User Credentials
-      </Button>
-    </VStack>
+        <Button
+          colorScheme="cyan"
+          width="100%"
+          style={{ marginTop: 15 }}
+          onClick={submitHandler}
+          isLoading={loading}
+        >
+          Login
+        </Button>
+        <Button
+          variant="solid"
+          colorScheme="red"
+          width="100%"
+          onClick={() => {
+            setEmail("develop@gmail.com");
+            setPassword("develop");
+          }}
+        >
+          Get Guest User Credentials
+        </Button>
+      </VStack>
+    </>
   );
 };
 
