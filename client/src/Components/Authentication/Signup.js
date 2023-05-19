@@ -7,10 +7,10 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 const Signup = () => {
   const [show, setShow] = useState(false);
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [cpassword, setCpassword] = useState();
-  const [password, setPassword] = useState();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [cpassword, setCpassword] = useState("");
+  const [password, setPassword] = useState("");
   const [pic, setPic] = useState();
   const [loading, setLoading] = useState(false);
   const toast = useToast();
